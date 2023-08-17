@@ -1,0 +1,146 @@
+*{
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    font-family: verdana, gevana,tahoma,sans-serif;
+    text-transform: capitalize;
+    font-weight: normal;
+}
+body{
+    background-color: gray;
+
+}
+.heading{
+    color: antiquewhite;
+    font-size: 40px;
+    text-align: center;
+    padding: 10px;
+
+}
+.container{
+    display:row;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    align-items: flex-start;
+    padding: 5px 5%;
+}
+.container .main-video{
+background: white;
+border-radius: 5px;
+padding: 10px;
+width: 100%;
+
+}
+.container .main-video video{
+    width: 100%;
+    border-radius: 5px;
+}
+.container .main-video .title{
+color:gray;
+font-size:23px;
+padding-top: 15px;
+padding-bottom: 15px;
+
+}
+.container .video-list{
+    background: #fff;
+    border-radius: 5px;
+    height: 720px;
+    overflow-x:scroll ;
+    width: 600px;
+
+}
+.container .video-list::-webkit-scrollbar{
+    width: 7px;
+}
+.container .video-list::-webkit-scrollbar-track{
+    background: #ccc;
+    border-radius: 50px;
+
+}
+.container .video-list::-webkit-scrollbar-thumb{
+    background: #666;
+    border-radius: 50px;
+ 
+}
+
+
+
+.container .video-list .vid video{
+width: 100px;
+border-radius: 5px;
+width: 300px;
+height: 400px;
+
+}
+
+.container .video-list .vid{
+ display: flex;
+ align-items: center;
+ gap: 15px;
+ background: white;
+ border-radius: 5px;
+ margin: 10px;
+ padding: 10px;
+ border: 1px solid rgba(0,0,0,.1);   
+ cursor: pointer;
+
+}
+.container .video-list .vid:hover{
+    background: white;
+
+}
+.container .video-list .vid.active{
+    background: skyblue;
+}
+.container .video-list .vid.active .title{
+    color: #fff;
+}
+.container .video-list .vid .title{
+    color: #333;
+    font-size: 17px;
+
+}
+img{
+    width: 200px;
+    height: 200px;
+    border-radius: 90%;
+}
+@media(max-width:991px){
+    .container{
+        grid-template-columns: 1.5fr 1fr;
+        padding:10px;
+    }
+}
+
+@media(max-width:768px){
+    .container{
+        grid-template-columns:1fr;
+        padding:10px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

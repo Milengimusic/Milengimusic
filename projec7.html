@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>judada</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ <h3 class="heading">snuggle music gallery</h3>
+ <p>musiso music</p>
+<div class="container">
+     <div class="main-video">
+        <center>
+
+
+        <img src="C:\Users\Sangwani Nyirongo\Pictures\image (1).png" alt=""/>
+
+        <br>
+       
+        <div class="video">
+            <audio src="C:\Users\Sangwani Nyirongo\Music\03-Questions.mp3" controls autoplay></audio>
+        <h3 class="title">judada hit maker</h3>
+        </div>
+    </center>
+     </div>
+<di class="video-list">
+    <div class="vid active">
+        <audio src="C:\Users\Sangwani Nyirongo\Music\02-Amakukonda.mp3" muted></audio>
+        <h3 class="title">gwamba ft elinjuchi  <p>fumbi prod by tmonre</p></h3>
+       
+
+    </div>
+    <div class="vid">
+        <video src="C:\Users\Sangwani Nyirongo\Desktop\FBI - Most Wanted - S02E01 HD.mp4" muted></video>
+        <h3 class="title">222fbi</h3>
+    </div>
+    <div class="vid">
+        <video src="C:\Users\Sangwani Nyirongo\Desktop\FBI - Most Wanted - S02E01 HD.mp4" muted></video>
+        <h3 class="title">4444fbi</h3>
+    </div>
+    <div class="vid">
+      <video src="C:\Users\Sangwani Nyirongo\Documents\j\Judada__-__Uweluke_[Director_By_Mr_Tmore(144p) - Copy.mp4"muted></video>
+       <h3 class="title">judada hit maker</h3>
+     </div>
+</div>
+</div>
+<script>
+ let listvideo = document.querySelectorAll('.video-list .vid');
+ let mainvideo= document.querySelector('.main-video audio');
+ let title = document.querySelector('.main-video .title');
+
+ listvideo.forEach(audio =>{
+    audio.onclick=() =>{
+    
+        listvideo.forEach(vid =>vid.classList.remove('active'));
+        audio.classList.add('active');
+        if(audio.classList.contains('active')){
+            let src =audio.children[0].getAttribute('src');
+            mainvideo.src=src;
+            let text = audio.children[1].innerHTML;
+            title.innerHTML = text;
+        };
+    };
+ });
+</script>
+</body> 
